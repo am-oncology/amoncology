@@ -91,16 +91,6 @@
             </div>
         </article>
     </div>
-    
-    <section class="cta-banner">
-        <div class="cta-content">
-            <h3>Clinical Oncology Tools</h3>
-            <p>Online suite of tools and calculators for clinical oncology - ongoing active updates and development - use at your own risk and check all information.</p>
-            <div class="hero-buttons">
-                <a href="tools/index.html" class="btn btn-primary">Click here to access</a>
-            </div>
-        </div>
-    </section>
 </main>
 
 <footer>
