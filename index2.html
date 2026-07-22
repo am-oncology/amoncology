@@ -5,16 +5,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dr Asad Mahmood | Consultant Clinical Oncologist</title>
-    <meta name="description" content="Information">
+    <meta name="description" content="Official website of Dr Asad Mahmood, Consultant Clinical Oncologist specialising in Gastrointestinal and Neuro-Oncology.">
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS Stylesheet -->
     <link rel="stylesheet" href="assets/style.css">
+
+    <!-- Scroll & Layout Fixes -->
     <style>
         html {
             scroll-behavior: smooth;
         }
+        /* Prevents sticky header from covering section titles when scrolling */
+        section[id] {
+            scroll-margin-top: 90px; 
+        }
     </style>
+
+    <!-- Schema.org JSON-LD (Medical Entity Markup) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Dr Asad Mahmood",
+      "jobTitle": "Consultant Clinical Oncologist",
+      "medicalSpecialty": [
+        "Oncology",
+        "RadiationOncology"
+      ],
+      "hospitalAffiliation": {
+        "@type": "Hospital",
+        "name": "Barts Health NHS Trust"
+      },
+      "email": "info@amoncology.com",
+      "telephone": "+442000000000",
+      "url": "https://amoncology.com"
+    }
+    </script>
 </head>
 
 <body>
@@ -41,7 +72,7 @@
             </a>
         </div>
         <nav>
-            <a href="#home">Home</a>
+            <a href="#home" class="active">Home</a>
             <a href="#about">About</a>
             <a href="#contact">Contact</a>
         </nav>
@@ -54,9 +85,9 @@
     <section id="home">
         <div class="hero-banner">
             <div class="hero-content">
-                <h2>Clinical Oncology</h2>
+                <h2>Clinical Oncology Care</h2>
                 <p class="hero-lead">
-                    Gastrointestinal and Neuro-Oncology Cancer Care
+                    Gastrointestinal and Neuro-Oncology Specialist
                 </p>
                 <div class="hero-buttons">
                     <a href="#contact" class="btn btn-primary">Contact</a>
@@ -66,12 +97,7 @@
         </div>
 
         <div class="container">
-            <section class="intro-text">
-                <h3>Title</h3>
-                <p>"Quote - Author"</p>
-            </section>
-
-            <div class="card-grid" style="margin-bottom: 4rem;">
+            <div class="card-grid" style="margin-top: 3rem; margin-bottom: 4rem;">
                 <article class="card">
                     <div class="card-image-wrapper">
                         <img src="https://images.unsplash.com/photo-1606150717578-567569be9d24?q=80&w=764&auto=format&fit=crop&sat=-100" alt="Radiotherapy">
@@ -96,12 +122,12 @@
 
                 <article class="card">
                     <div class="card-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1641712695162-884b8cf773bb?q=80&w=1170&auto=format&fit=crop&sat=-100" alt="Miscellaneous">
+                        <img src="https://images.unsplash.com/photo-1641712695162-884b8cf773bb?q=80&w=1170&auto=format&fit=crop&sat=-100" alt="Research & Publications">
                     </div>
                     <div class="card-body">
                         <h3>Research & Publications</h3>
-                        <p>Research focus and academic interests</p>
-                        <a href="https://scholar.google.com/citations?hl=en&user=F5NzX1UAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="noopener" class="text-link">Click here &rarr;</a>
+                        <p>Academic interests, clinical trials, and published literature in clinical oncology.</p>
+                        <a href="https://scholar.google.com/citations?hl=en&user=F5NzX1UAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="noopener" class="text-link">View Publications &rarr;</a>
                     </div>
                 </article>
             </div>
@@ -145,7 +171,7 @@
                             <li>Rectum</li>
                             <li>Anal</li>
                             <li>Appendix</li>
-                            <li>Liver mets</li>
+                            <li>Liver metastases</li>
                         </ul>
                     </div>
                     <div class="card card-body">
@@ -153,17 +179,18 @@
                         <p style="font-size: 0.9rem;">Including:</p>
                         <ul style="padding-left: 20px; color: var(--text-light);">
                             <li>Primary brain & spinal tumours</li>
-                            <li>Brain mets</li>
+                            <li>Brain metastases</li>
                             <li>Skull base tumours</li>
                             <li>Ocular tumours and benign conditions</li>
                         </ul>
                     </div>
                     <div class="card card-body">
-                        <h3>Radiotherapy</h3>
+                        <h3>Radiotherapy Techniques</h3>
                         <p style="font-size: 0.9rem;">Technical expertise in:</p>
                         <ul style="padding-left: 20px; color: var(--text-light);">
-                            <li>Stereotactic Radiotherapy (SABR/SBRT) and Radiosurgery (SRS)</li>
-                            <li>Contact Bracytherapy (Papillon)</li>
+                            <li>Stereotactic Radiotherapy (SRS / SBRT)</li>
+                            <li>Contact Radiotherapy (Papillon Brachytherapy)</li>
+                            <li>Intensity-Modulated Radiotherapy (IMRT)</li>
                         </ul>
                     </div>
                 </div>
@@ -252,7 +279,7 @@
                             [Postcode]
                         </address>
                         <p><em>Clinics held: [Day/Time]</em></p>
-                        <a href="https://maps.google.com" target="_blank" class="btn btn-secondary" style="background: var(--navy-primary); color: white; border:none; margin-top: 10px; font-size: 0.8rem;">View on Map</a>
+                        <a href="https://maps.google.com" target="_blank" rel="noopener" class="btn btn-secondary" style="background: var(--navy-primary); color: white; border:none; margin-top: 10px; font-size: 0.8rem;">View on Map</a>
                     </article>
 
                     <article class="location-card">
@@ -263,7 +290,7 @@
                             [Postcode]
                         </address>
                         <p><em>Clinics held: [Day/Time]</em></p>
-                        <a href="https://maps.google.com" target="_blank" class="btn btn-secondary" style="background: var(--navy-primary); color: white; border:none; margin-top: 10px; font-size: 0.8rem;">View on Map</a>
+                        <a href="https://maps.google.com" target="_blank" rel="noopener" class="btn btn-secondary" style="background: var(--navy-primary); color: white; border:none; margin-top: 10px; font-size: 0.8rem;">View on Map</a>
                     </article>
                 </div>
             </div>
@@ -286,6 +313,32 @@
         </div>
     </div>
 </footer>
+
+<!-- Active Nav Link Switcher Script -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const observerOptions = {
+            root: null,
+            rootMargin: '-20% 0px -60% 0px',
+            threshold: 0
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.getAttribute('id');
+                    document.querySelectorAll('nav a').forEach(link => {
+                        link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+                    });
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('main > section').forEach(section => {
+            observer.observe(section);
+        });
+    });
+</script>
 
 </body>
 </html>
