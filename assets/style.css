@@ -392,3 +392,21 @@ footer {
   .bio-grid { grid-template-columns: 1fr; } 
   .bio-image-placeholder { order: -1; margin-bottom: 2rem; height: 300px; } 
 }
+
+/* 11. DRY elements */
+/* Smooth Scroll & Offset */
+html { scroll-behavior: smooth; }
+section[id] { scroll-margin-top: 90px; }
+/* Reusable Utilities */
+.section-space { margin-bottom: 4rem; }
+.card-list { padding-left: 20px; color: var(--text-light); }
+.list-label { font-size: 0.9rem; }
+.section-heading { font-size: 1.8rem; margin-bottom: 1.5rem; }
+/* Dedicated Button Modifier (replaces inline button overrides) */
+.btn-map {
+    background: var(--navy-primary);
+    color: #fff;
+    border: none;
+    margin-top: 10px;
+    font-size: 0.8rem;
+}
