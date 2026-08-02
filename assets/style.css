@@ -1,0 +1,594 @@
+/* ==========================================================================
+   AM ONCOLOGY — assets/style.css
+   1.  Variables
+   2.  Base
+   3.  Skip link
+   4.  Top bar
+   5.  Header & nav
+   6.  Hero
+   7.  Buttons
+   8.  Cards
+   9.  Page headers
+   10. Biography
+   11. Qualifications
+   12. Alerts & contact
+   13. Footer
+   14. Utilities
+   15. Responsive
+   16. Accessibility preferences
+   17. PRE-LAUNCH PLACEHOLDERS  <-- delete this section before going live
+   ========================================================================== */
+
+/* 1. VARIABLES ============================================================ */
+:root {
+  --navy-dark: #0A1929;
+  --navy-primary: #183B56;
+  --teal-accent: #3E8E95;
+  --teal-hover: #32757B;
+  --gold-accent: #C5A065;        /* decorative only — fails AA on white */
+  --gold-accent-text: #8A6B32;   /* accessible variant for text */
+
+  --bg-body: #FAFAFA;
+  --bg-white: #FFFFFF;
+  --bg-muted: #F1F5F9;
+  --border-light: #E2E8F0;
+
+  --text-main: #334155;
+  --text-light: #64748B;
+
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  --shadow-soft: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
+  --shadow-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+* { box-sizing: border-box; }
+
+/* 2. BASE ================================================================= */
+body {
+  font-family: var(--font-body);
+  margin: 0;
+  line-height: 1.7;
+  color: var(--text-main);
+  background-color: var(--bg-body);
+  font-size: 16px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  color: var(--navy-dark);
+  margin-top: 0;
+  line-height: 1.2;
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 20px;
+}
+
+html { scroll-behavior: smooth; }
+section[id] { scroll-margin-top: 90px; }
+
+/* Visible keyboard focus on every interactive element (WCAG 2.4.7) */
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid var(--gold-accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* 3. SKIP LINK ============================================================ */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 2000;
+  background: var(--navy-dark);
+  color: #fff;
+  padding: 0.9rem 1.4rem;
+  text-decoration: none;
+  font-weight: 600;
+}
+.skip-link:focus { left: 0; }
+
+/* 4. TOP BAR ============================================================== */
+.top-bar {
+  background-color: var(--navy-dark);
+  color: #fff;
+  font-size: 0.85rem;
+  padding: 8px 0;
+  letter-spacing: 0.5px;
+}
+.top-bar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.contact-links { display: flex; align-items: center; gap: 10px; }
+.contact-links a {
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.9;
+}
+.contact-links a:hover { opacity: 1; text-decoration: underline; }
+
+/* 5. HEADER & NAV ========================================================= */
+header {
+  background: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid var(--border-light);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand-link { text-decoration: none; display: block; }
+
+/* Site name is a paragraph, not a heading, so the page keeps a single h1 */
+.brand-name {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 0;
+  color: var(--navy-primary);
+}
+
+.subtitle {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-light);
+}
+
+nav a {
+  color: var(--text-main);
+  margin-left: 2rem;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.2s;
+  position: relative;
+}
+nav a:hover, nav a.active { color: var(--navy-primary); }
+
+nav a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: var(--gold-accent);
+  transition: width 0.3s;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+nav a:hover::after,
+nav a.active::after { width: 100%; }
+
+/* 6. HERO ================================================================= */
+.hero-banner {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  background: linear-gradient(rgba(10, 25, 41, 0.78), rgba(10, 25, 41, 0.65)),
+              url('https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=1470&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+  color: var(--bg-white);
+  padding: 6rem 3rem;
+  margin-bottom: 3rem;
+  box-shadow: var(--shadow-soft);
+  text-align: left;
+}
+
+.hero-content { max-width: 700px; }
+
+.hero-banner h1 {
+  color: var(--bg-white);
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+/* Role line sits inside the h1 — one heading, two visual lines */
+.hero-role {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  opacity: 0.85;
+  margin-top: 0.85rem;
+}
+
+.hero-lead {
+  font-size: 1.25rem;
+  opacity: 0.95;
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+
+/* 7. BUTTONS ============================================================== */
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.8rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  margin-right: 10px;
+}
+
+.btn-primary {
+  background-color: var(--teal-accent);
+  color: #fff;
+  border: 1px solid var(--teal-accent);
+}
+.btn-primary:hover {
+  background-color: var(--teal-hover);
+  border-color: var(--teal-hover);
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+}
+.btn-secondary:hover { background-color: rgba(255, 255, 255, 0.12); }
+
+.btn-map {
+  background: var(--navy-primary);
+  color: #fff;
+  border: none;
+  margin-top: 10px;
+  font-size: 0.8rem;
+}
+.btn-map:hover { background: var(--navy-dark); }
+
+/* 8. CARDS ================================================================ */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: var(--bg-white);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  border-top: 4px solid transparent;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+  border-top-color: var(--teal-accent);
+}
+
+.card-image-wrapper {
+  height: 220px;
+  overflow: hidden;
+  background: var(--bg-muted);
+}
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.card:hover img { transform: scale(1.05); }
+
+.card-body { padding: 2rem; }
+.card-body h2,
+.card-body h3,
+.card-body h4 {
+  font-size: 1.35rem;
+  margin-bottom: 0.6rem;
+}
+.card-body p {
+  font-size: 0.95rem;
+  color: var(--text-light);
+  margin-bottom: 1.5rem;
+}
+
+.card-list {
+  padding-left: 20px;
+  color: var(--text-light);
+  margin-top: 0;
+}
+.list-label { font-size: 0.9rem; margin-bottom: 0.4rem; }
+
+.text-link {
+  color: var(--teal-accent);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.text-link:hover { text-decoration: underline; }
+
+/* 9. PAGE HEADERS ========================================================= */
+.page-header {
+  background: var(--navy-primary);
+  color: #fff;
+  padding: 4rem 2rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  border-radius: 8px;
+}
+.page-header h2 {
+  color: #fff;
+  margin: 0;
+  font-size: 2.2rem;
+}
+
+/* 10. BIOGRAPHY =========================================================== */
+.bio-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+  align-items: start;
+  margin-bottom: 4rem;
+}
+.bio-text h3 { font-size: 1.8rem; margin-bottom: 1rem; }
+
+.bio-photo {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: var(--shadow-soft);
+  display: block;
+}
+
+.bio-image-placeholder {
+  background: var(--bg-muted);
+  height: 400px;
+  width: 100%;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-soft);
+}
+
+/* 11. QUALIFICATIONS ====================================================== */
+.qualifications-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.qualifications-list li {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border-light);
+  display: flex;
+  flex-wrap: wrap;              /* stops the two columns squashing on mobile */
+  justify-content: space-between;
+  gap: 0.35rem 1.5rem;
+}
+.qualifications-list li:last-child { border-bottom: none; }
+.qualifications-list strong { color: var(--navy-primary); }
+.qual-org {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+/* 12. ALERTS & CONTACT ==================================================== */
+.alert-box {
+  background-color: #FEF2F2;
+  border-left: 5px solid #EF4444;
+  padding: 1.5rem;
+  border-radius: 4px;
+  margin-bottom: 3rem;
+  color: #991B1B;
+}
+.alert-box h3 {
+  color: #991B1B;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+/* Exclamation mark drawn in CSS so screen readers don't announce a stray character */
+.alert-box h3::before {
+  content: '';
+  flex: 0 0 auto;
+  width: 24px;
+  height: 24px;
+  background-color: #EF4444;
+  border-radius: 50%;
+  margin-right: 10px;
+  background-image: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff);
+  background-repeat: no-repeat;
+  background-size: 2px 9px, 2px 2px;
+  background-position: center 6px, center 16px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.location-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--border-light);
+}
+.location-card h4 { font-size: 1.25rem; }
+.location-card address {
+  font-style: normal;
+  color: var(--text-light);
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.notice-card { border-left: 4px solid var(--navy-primary); }
+
+.section-heading { font-size: 1.8rem; margin-bottom: 1.5rem; }
+
+.fine-print {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  margin-top: 1.5rem;
+}
+.fine-print a { color: var(--teal-accent); }
+
+/* 13. FOOTER ============================================================== */
+footer {
+  background: var(--bg-muted);
+  color: var(--text-light);
+  padding: 3rem 0;
+  margin-top: 4rem;
+  border-top: 1px solid var(--border-light);
+}
+.footer-info { margin-bottom: 1rem; }
+.footer-legal { font-size: 0.85rem; }
+.footer-legal a { color: var(--navy-primary); text-decoration: none; }
+.footer-legal a:hover { text-decoration: underline; }
+
+/* 14. UTILITIES =========================================================== */
+.section-space { margin-bottom: 4rem; }
+.mt-0  { margin-top: 0 !important; }
+.mt-3  { margin-top: 3rem; }
+.mb-0  { margin-bottom: 0 !important; }
+.mb-lg { margin-bottom: 2rem; }
+.card-flush { padding: 0; }
+.muted { color: var(--text-light); }
+
+/* 15. RESPONSIVE ========================================================== */
+@media (max-width: 768px) {
+  .top-bar { display: none; }
+
+  .header-flex { flex-direction: column; text-align: center; }
+  nav { margin-top: 1rem; display: flex; flex-direction: column; gap: 0.8rem; }
+  nav a { margin: 0; }
+
+  .hero-banner { padding: 3rem 1.5rem; text-align: center; }
+  .hero-banner h1 { font-size: 2rem; }
+  .hero-role { font-size: 0.8rem; }
+  .hero-lead { font-size: 1.05rem; }
+  .btn { display: block; margin: 0 0 0.75rem 0; text-align: center; }
+
+  .page-header { padding: 2.5rem 1.5rem; }
+  .page-header h2 { font-size: 1.6rem; }
+
+  .bio-grid { grid-template-columns: 1fr; }
+  .bio-image { order: -1; margin-bottom: 2rem; }
+  .bio-image-placeholder { height: 300px; }
+
+  .qualifications-list li { flex-direction: column; }
+  .qual-org { white-space: normal; }
+}
+
+/* 16. ACCESSIBILITY PREFERENCES =========================================== */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+  .card:hover,
+  .card:hover img,
+  .btn-primary:hover { transform: none; }
+}
+
+@media print {
+  .top-bar, header, nav, footer, .hero-buttons, .btn, .prelaunch { display: none !important; }
+  body { background: #fff; font-size: 11pt; }
+  .card, .location-card { box-shadow: none; border: 1px solid #ccc; }
+  .page-header { background: none; color: #000; padding: 1rem 0; }
+  .page-header h2 { color: #000; }
+}
+
+/* ==========================================================================
+   17. PRE-LAUNCH PLACEHOLDERS
+   DELETE THIS ENTIRE SECTION BEFORE THE SITE GOES LIVE.
+   Deliberately loud so nothing slips through unnoticed.
+   ========================================================================== */
+.prelaunch {
+  background: #1C1917;
+  color: #FDE68A;
+  border-bottom: 4px solid #F59E0B;
+  padding: 1.25rem 0;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+.prelaunch-title {
+  margin: 0 0 0.5rem 0;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #FCD34D;
+}
+.prelaunch-sub { margin: 0 0 0.4rem 0; color: #E7E5E4; }
+.prelaunch ol {
+  margin: 0;
+  padding-left: 1.4rem;
+  columns: 2;
+  column-gap: 2.5rem;
+}
+.prelaunch li { margin-bottom: 0.25rem; color: #E7E5E4; }
+.prelaunch code {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1px 5px;
+  border-radius: 3px;
+  font-size: 0.8rem;
+  color: #FDE68A;
+}
+
+/* Inline "to be confirmed" marker */
+.todo {
+  display: inline-block;
+  background: #FEF3C7;
+  color: #78350F;
+  border: 1px dashed #D97706;
+  border-radius: 3px;
+  padding: 1px 8px;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+.top-bar .todo { background: transparent; color: #FCD34D; border-color: #FCD34D; }
+
+/* Block-level placeholder note inside a card */
+.todo-block {
+  background: #FFFBEB;
+  border-left: 3px solid #D97706;
+  padding: 1rem 1.2rem;
+  border-radius: 4px;
+  color: #78350F !important;
+  font-size: 0.9rem !important;
+}
+.todo-block .todo { margin-right: 0.5rem; }
+
+@media (max-width: 768px) {
+  .prelaunch ol { columns: 1; }
+}
