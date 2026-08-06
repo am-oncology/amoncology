@@ -1,3 +1,51 @@
+/* 0. SELF-HOSTED FONTS */
+/* Files live in assets/fonts/ — paths are relative to this stylesheet.
+   Update the version strings (v24 / v37) to match your actual filenames. */
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('fonts/lato-v24-latin-300.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/lato-v24-latin-regular.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('fonts/lato-v24-latin-700.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/playfair-display-v37-latin-regular.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('fonts/playfair-display-v37-latin-600.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('fonts/playfair-display-v37-latin-700.woff2') format('woff2');
+}
+
 /* 1. GLOBAL VARIABLES */
 :root {
   --navy-dark: #0A1929;     
@@ -11,8 +59,8 @@
   --text-main: #334155;
   --text-light: #64748B;
   
-  --font-heading: 'Playfair Display', serif;
-  --font-body: 'Lato', sans-serif;
+  --font-heading: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-body: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
   
   --shadow-soft: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
   --shadow-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
@@ -99,7 +147,7 @@ nav a {
   margin-left: 2rem;
   text-decoration: none;
   font-size: 0.95rem;
-  font-weight: 500;
+  font-weight: 400;
   transition: color 0.2s;
   position: relative;
 }
@@ -148,7 +196,7 @@ main {
   border-radius: 12px;
   overflow: hidden;
   background: linear-gradient(rgba(10, 25, 41, 0.75), rgba(10, 25, 41, 0.6)), 
-              url('https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=1470&auto=format&fit=crop');
+              url('photo-1448375240586-882707db888b_hero.jpg');
   background-size: cover;
   background-position: center;
   color: var(--bg-white);
@@ -178,7 +226,7 @@ main {
   padding: 0.8rem 1.8rem;
   border-radius: 4px; 
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 700;
   transition: all 0.2s ease;
   margin-right: 10px;
 }
@@ -243,6 +291,9 @@ main {
   height: 100%;
   object-fit: cover;
   transition: transform 0.5s ease;
+  /* Guarantees the greyscale card treatment regardless of how the
+     source files were downloaded. Harmless if already desaturated. */
+  filter: grayscale(1);
 }
 .card:hover img { transform: scale(1.05); } 
 
@@ -253,7 +304,7 @@ main {
 .text-link {
   color: var(--teal-accent);
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 0.9rem;
 }
 .text-link:hover { text-decoration: underline; }
@@ -429,4 +480,14 @@ section[id] { scroll-margin-top: 90px; }
     border: none;
     margin-top: 10px;
     font-size: 0.8rem;
+}
+
+/* 12. ACCESSIBILITY */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
