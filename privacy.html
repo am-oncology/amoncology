@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy & Legal Terms | Dr Firstname Lastname | Clinical Oncologist</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
-    
+    <title>Privacy &amp; Cookie Policy | Dr Firstname Lastname | Clinical Oncologist</title>
+    <meta name="description" content="Privacy notice and cookie policy for the website of Dr [Firstname] [Lastname], Consultant Clinical Oncologist.">
+    <meta name="robots" content="index, follow">
+
+    <!-- Self-hosted fonts. Update version strings to match your actual filenames. -->
+    <link rel="preload" href="assets/fonts/playfair-display-v37-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/lato-v24-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="assets/style.css">
 
     <style>
@@ -54,6 +55,44 @@
             margin-bottom: 1.5rem;
         }
 
+        .legal-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+        }
+        .legal-content th, .legal-content td {
+            text-align: left;
+            padding: 0.6rem 0.8rem;
+            border-bottom: 1px solid #e2e8f0;
+            vertical-align: top;
+        }
+        .legal-content th {
+            color: var(--navy-primary);
+            font-family: var(--font-heading);
+            font-weight: 600;
+        }
+
+        .part-divider {
+            margin-top: 3.5rem;
+            padding: 1rem 1.5rem;
+            background: var(--navy-primary);
+            color: #fff;
+            border-radius: 6px;
+        }
+        .part-divider h2 {
+            color: #fff !important;
+            border: none !important;
+            padding: 0 !important;
+            margin: 0 !important;
+            font-size: 1.35rem;
+        }
+        .part-divider p {
+            color: rgba(255,255,255,0.85) !important;
+            margin: 0.4rem 0 0 0 !important;
+            font-size: 0.9rem;
+        }
+
         .disclaimer-box {
             background: #f8fafc;
             border: 1px solid #e2e8f0;
@@ -63,8 +102,41 @@
             border-top: 4px solid var(--navy-primary);
         }
 
+        .info-box {
+            background: #f0f9fa;
+            border: 1px solid #d3e8ea;
+            padding: 1.5rem 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            border-left: 4px solid var(--teal-accent);
+        }
+        .info-box p:last-child { margin-bottom: 0; }
+
+        .urgent-box {
+            background-color: #fef2f2;
+            border-left: 5px solid #ef4444;
+            padding: 1.5rem 2rem;
+            border-radius: 4px;
+            margin: 2rem 0;
+            color: #991b1b;
+        }
+        .urgent-box p { color: #991b1b !important; }
+        .urgent-box p:last-child { margin-bottom: 0; }
+
+        .toc {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 1.5rem 2rem;
+            margin-bottom: 3rem;
+        }
+        .toc ul { list-style: none; padding-left: 0; margin-bottom: 0; }
+        .toc li { margin-bottom: 0.4rem; font-size: 0.9rem; }
+        .toc a { color: var(--teal-accent); text-decoration: none; }
+        .toc a:hover { text-decoration: underline; }
+
         @media print {
-            header, footer, nav { display: none !important; }
+            header, footer, nav, .toc { display: none !important; }
             .legal-container { margin: 0; width: 100%; }
         }
     </style>
@@ -76,7 +148,8 @@
     <div class="container header-flex">
         <div class="brand">
             <a href="index.html" style="text-decoration:none;">
-                <h1>Dr Firstname Lastname | Clinical Oncologist</h1>
+                <h1>Dr Firstname Lastname</h1>
+                <span class="subtitle">Consultant Clinical Oncologist</span>
             </a>
         </div>
         <nav>
@@ -87,72 +160,208 @@
 
 <main>
     <article class="legal-container">
-        
+
         <div class="legal-header">
-            <h1 style="margin:0; font-size: 2.2rem;">Privacy Policy & Terms of Use</h1>
-            <p style="color: var(--text-light); margin-top: 0.5rem;">Version 2.1 | Last Updated: January 2026</p>
+            <h1 style="margin:0; font-size: 2.2rem;">Privacy &amp; Cookie Policy</h1>
+            <p style="color: var(--text-light); margin-top: 0.5rem;">Last updated: [Insert Date]</p>
         </div>
 
+        <nav class="toc" aria-label="Contents">
+            <ul>
+                <li><a href="#s1">1. About this notice</a></li>
+                <li><a href="#s2">2. Who we are and how to contact us</a></li>
+                <li><a href="#s3">Part A — Visitors to this website</a></li>
+                <li><a href="#s7">Part B — Patients and clinical care</a></li>
+                <li><a href="#s12">3. Communicating with us</a></li>
+                <li><a href="#s13">4. Your rights</a></li>
+                <li><a href="#s14">5. Complaints</a></li>
+                <li><a href="#s15">6. Changes to this notice</a></li>
+                <li><a href="#s16">7. Disclaimers</a></li>
+            </ul>
+        </nav>
+
         <section class="legal-content">
-            
-            <h2>1. Introduction</h2>
-            <p>This policy outlines how the private practice of Dr [Firstname] [Lastname] ("we", "our", "the Practice") collects, processes, and protects personal and healthcare data. We are committed to ensuring your privacy is protected in accordance with the UK General Data Protection Regulation (UK GDPR) and the Data Protection Act 2018.</p>
 
-            <h2>2. The Data Controller</h2>
-            <p>The Data Controller responsible for your personal information is <strong>Dr [Firstname] [Lastname]</strong>. The Practice is registered with the Information Commissioner’s Office (ICO) under registration number <strong>[Insert ICO Number]</strong>.</p>
-
-            <h2>3. Lawful Basis for Processing</h2>
-            <p>We process personal data under the following legal bases:</p>
+            <h2 id="s1">1. About this notice</h2>
+            <p>This notice explains how Dr [Firstname] [Lastname] ("we", "our", "the Practice") handles personal data, and how cookies and similar technologies are used on this website (www.amoncology.com).</p>
+            <p>It is written in two parts, because the two situations are very different:</p>
             <ul>
-                <li><strong>Contractual Necessity:</strong> To provide medical consultations and treatment.</li>
-                <li><strong>Legal Obligation:</strong> To comply with professional clinical regulations and financial reporting.</li>
-                <li><strong>Special Category Data (Health Data):</strong> Processed under Article 9(2)(h) of the GDPR—the provision of health or social care or treatment.</li>
+                <li><strong>Part A</strong> applies to anyone who simply visits this website. Almost no personal data is involved.</li>
+                <li><strong>Part B</strong> applies if you become a patient. This involves detailed health information and is governed by additional legal and professional duties.</li>
+            </ul>
+            <p>We handle personal data in accordance with the UK General Data Protection Regulation (UK GDPR) and the Data Protection Act 2018 (both as amended by the Data (Use and Access) Act 2025), and the Privacy and Electronic Communications Regulations 2003 (PECR).</p>
+
+            <h2 id="s2">2. Who we are and how to contact us</h2>
+            <p>The data controller responsible for your personal information is <strong>Dr [Firstname] [Lastname]</strong>, General Medical Council registration number <strong>[Insert GMC Number]</strong>.</p>
+            <p>We are registered with the Information Commissioner's Office (ICO) under registration number <strong>[Insert ICO Registration Number]</strong>.</p>
+            <p>For any question about this notice, or to exercise any of the rights described in section 4, contact:</p>
+            <ul>
+                <li><strong>Email:</strong> <a href="mailto:[Insert Email]" class="text-link">[Insert Email]</a></li>
+                <li><strong>Post:</strong> [Insert Postal Address]</li>
+            </ul>
+            <p>We have not appointed a Data Protection Officer. An individual health professional providing care is not generally required to appoint one, and the contact above is responsible for data protection matters.</p>
+
+            <p>Clinical care is delivered at hospitals and clinics which are themselves registered with the Care Quality Commission (CQC) for the regulated activities carried out at those locations. We work at those sites under practising privileges granted by the provider, and care given there is subject to that provider's CQC registration, governance arrangements and complaints procedures.</p>
+
+            <div class="part-divider" id="s3">
+                <h2>Part A — Visitors to this website</h2>
+                <p>This part applies to everyone who reads this site. You do not need to be a patient.</p>
+            </div>
+
+            <h2 id="s4">A1. We do not collect data through this website</h2>
+            <div class="info-box">
+                <p><strong>There are no forms on this site.</strong> There is no contact form, no newsletter sign-up, no patient portal, no online booking and no payment facility. Nothing you type is submitted to us, because there is nowhere to type it.</p>
+                <p>The only ways to reach us are the published email address and telephone number. Those are contacts <em>you</em> choose to initiate, and are covered by section 3 below.</p>
+            </div>
+
+            <h2 id="s5">A2. How the site is built and hosted</h2>
+            <p>This is a static website. The pages, images and fonts are stored as fixed files and sent to your browser unchanged; there is no database and no server-side processing of visitor information.</p>
+            <p>The site's source files are held in a private code repository on <strong>GitHub</strong>, and the site is published and delivered to visitors by <strong>Cloudflare</strong>. [<em>Amend if you use Cloudflare in front of GitHub Pages: in that configuration GitHub also acts as the origin server and receives page requests.</em>]</p>
+            <p>All fonts and images are served from our own domain. This site makes no requests to third-party font services, image libraries, advertising networks, social media platforms or analytics providers.</p>
+
+            <h3>Technical logs</h3>
+            <p>As with any website, Cloudflare automatically records limited technical information in order to deliver pages and protect the site from attack — typically the IP address, the page requested, the time of the request, and basic browser and device information.</p>
+            <ul>
+                <li><strong>Purpose:</strong> delivering the website, maintaining its security and availability, and preventing malicious traffic.</li>
+                <li><strong>Lawful basis:</strong> legitimate interests (Article 6(1)(f) UK GDPR) — our interest in operating a secure, functioning website, which we consider does not override your rights given how little information is involved.</li>
+                <li><strong>Retention:</strong> these logs are held by Cloudflare for a short period under its standard retention settings and are not copied, exported or combined with any other information by us.</li>
+                <li><strong>Use:</strong> we do not use this information to identify individual visitors, build profiles, or track you across other websites.</li>
             </ul>
 
-            <h2>4. Information We Collect</h2>
-            <h3>A. Website Usage</h3>
-            <p>This website is an informational resource. It does not use marketing cookies or tracking pixels. Technical logs (IP addresses) are processed by our host, GitHub Pages, for security and stability purposes.</p>
-            
-            <h3>B. Clinical Records</h3>
-            <p>When you become a patient, we collect:
-                <ul>
-                    <li>Personal identifiers (Name, DOB, NHS Number).</li>
-                    <li>Contact details (Address, phone, secure email).</li>
-                    <li>Medical history, diagnostic reports, imaging (CT/MRI), and pathology results.</li>
-                    <li>Private insurance details or billing information.</li>
-                </ul>
-            </p>
+            <h3>International transfers</h3>
+            <p>Cloudflare and GitHub are US-headquartered companies operating global infrastructure, so the limited technical data described above may be processed outside the United Kingdom. Where that happens, transfers are covered by the safeguards those providers maintain for UK and EU customers — the International Data Transfer Addendum to the EU Standard Contractual Clauses, or the UK Extension to the EU–US Data Privacy Framework. No clinical or health information is transferred, because none is submitted through this website.</p>
 
-            <h2>5. Data Sharing & Third Parties</h2>
-            <p>To provide safe and effective clinical care, your data may be shared with:</p>
+            <h2 id="s6">A3. Cookies and similar technologies</h2>
+            <p>PECR governs anything that stores information on, or reads information from, your device — cookies, local storage, tracking pixels and similar technologies.</p>
+            <p><strong>This website sets no analytics, advertising, marketing or tracking technologies of any kind.</strong> No consent banner is displayed because nothing is used that requires your consent.</p>
+            <p>Cloudflare may set a small number of strictly necessary cookies to keep the site secure and available — for example, to distinguish genuine visitors from automated traffic. These fall within the "strictly necessary" exception in PECR and cannot be switched off without affecting delivery of the site itself.</p>
+            <table>
+                <caption class="visually-hidden"></caption>
+                <tr>
+                    <th scope="col">Category</th>
+                    <th scope="col">Used on this site?</th>
+                    <th scope="col">Set by</th>
+                </tr>
+                <tr>
+                    <td>Strictly necessary (security, availability)</td>
+                    <td>Yes</td>
+                    <td>Cloudflare</td>
+                </tr>
+                <tr>
+                    <td>Analytics or statistical measurement</td>
+                    <td>No</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>Advertising, marketing or profiling</td>
+                    <td>No</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>Social media or embedded third-party content</td>
+                    <td>No</td>
+                    <td>—</td>
+                </tr>
+            </table>
+            <p>You can block or delete cookies through your browser settings at any time. Because this site relies on nothing beyond the strictly necessary, doing so should not prevent you reading or navigating it.</p>
+
+            <h3>Links to other websites</h3>
+            <p>This site links to external organisations such as Macmillan Cancer Support and other resources. Following those links takes you to websites we do not control. This notice does not apply to them, and we are not responsible for their content or their privacy practices. Please read their own policies.</p>
+
+            <div class="part-divider" id="s7">
+                <h2>Part B — Patients and clinical care</h2>
+                <p>This part applies only if you are referred to, or treated by, the Practice. None of it is triggered by visiting this website.</p>
+            </div>
+
+            <h2 id="s8">B1. What we hold and where it comes from</h2>
+            <p>To provide clinical care we hold:</p>
             <ul>
-                <li>Your General Practitioner (GP) and referring consultants.</li>
-                <li>Hospital providers (for scans, blood tests, or radiotherapy delivery).</li>
-                <li>Clinical multidisciplinary teams (MDTs) for peer-review of treatment plans.</li>
-                <li>Private medical insurers (for billing and authorisation).</li>
-                <li>Professional clinical auditors or regulators (as required by law).</li>
+                <li>Personal identifiers — name, date of birth, NHS number.</li>
+                <li>Contact details — address, telephone, email.</li>
+                <li>Clinical information — medical history, symptoms, examination findings, diagnostic imaging (CT, MRI, PET), pathology and laboratory results, treatment plans and correspondence.</li>
+                <li>Where applicable, private medical insurance and billing details.</li>
             </ul>
+            <p>Some of this comes directly from you. A significant proportion reaches us from other sources, including your GP, referring clinicians, hospital records systems, diagnostic providers, multidisciplinary team meetings, and your insurer where relevant. We may also receive information from a relative or carer acting on your behalf.</p>
 
-            <h2>6. Data Retention</h2>
-            <p>We retain medical records in accordance with the <em>Records Management Code of Practice for Health and Social Care</em>. Generally, clinical records are retained for a minimum of <strong>8 years</strong> after the conclusion of treatment, or longer in specific oncological contexts, to ensure continuity of care and legal compliance.</p>
-
-            <h2>7. Security & Email Communication</h2>
-            <p><strong>Warning:</strong> Standard internet email is not a secure medium. Information sent via email could be intercepted. By emailing the Practice, you acknowledge these risks. We recommend the use of encrypted platforms or NHS-to-NHS mail for the transfer of sensitive diagnostic reports.</p>
-
-            <h2>8. Your Rights</h2>
-            <p>Under UK GDPR, you have the right to:</p>
+            <h2 id="s9">B2. Lawful bases for clinical processing</h2>
+            <p>Health information is "special category" data and needs a basis under both Article 6 and Article 9 of the UK GDPR:</p>
             <ul>
-                <li>Request access to your medical records (Subject Access Request).</li>
-                <li>Request rectification of inaccurate data.</li>
-                <li>Object to processing (noting that this may impact our ability to provide safe care).</li>
-                <li>Lodge a complaint with the ICO (www.ico.org.uk).</li>
+                <li><strong>Article 6(1)(b)</strong> — performance of a contract, where we have agreed to provide private care.</li>
+                <li><strong>Article 6(1)(c)</strong> — legal obligation, for example clinical record-keeping and financial or tax reporting.</li>
+                <li><strong>Article 6(1)(f)</strong> — legitimate interests, for administration of the Practice and defence of legal claims.</li>
+                <li><strong>Article 9(2)(h)</strong> — medical diagnosis and the provision of health care and treatment, together with the condition at <strong>Schedule 1, Part 1, paragraph 2 of the Data Protection Act 2018</strong>. This processing is carried out by, or under the responsibility of, a professional subject to a duty of confidentiality under Article 9(3).</li>
+                <li><strong>Article 9(2)(f)</strong> — establishment, exercise or defence of legal claims, if that becomes necessary.</li>
             </ul>
+            <p>Separately from data protection law, we owe you a professional duty of confidentiality, and we follow General Medical Council guidance on confidentiality and disclosure.</p>
 
-            <div class="disclaimer-box">
-                <h2 style="margin-top:0; border:none; padding:0; font-size: 1.4rem;">Medical & Legal Disclaimer</h2>
-                <p><strong>Not Medical Advice:</strong> The information provided on this website, including the CXB Pathway Planner, is for educational and administrative guidance only. It does not constitute medical advice, diagnosis, or treatment planning for individual cases.</p>
-                <p><strong>No Doctor-Patient Relationship:</strong> Accessing this website or using the online tools does not establish a formal doctor-patient relationship. Such a relationship is only formed following a formal clinical consultation and letter of engagement.</p>
-                <p style="margin-bottom:0;"><strong>Clinical Tool Accuracy:</strong> While every effort is made to ensure the accuracy of the CXB Pathway Planner, clinical timelines are subject to change based on individual patient factors, hospital capacity, and clinical judgement.</p>
+            <h2 id="s10">B3. Who your information is shared with</h2>
+            <p>To provide safe and effective care, we may share relevant information with:</p>
+            <ul>
+                <li>Your GP and any referring or treating consultants.</li>
+                <li>Hospitals and diagnostic providers delivering scans, tests, radiotherapy or drug treatment.</li>
+                <li>Multidisciplinary teams, for peer review of diagnosis and treatment planning.</li>
+                <li>Your private medical insurer, for authorisation and billing, where you are insured.</li>
+                <li>National cancer registries and statutory bodies, where disclosure is required or permitted by law.</li>
+                <li>Regulators, auditors and professional indemnity organisations, where required by law or necessary to respond to a complaint or claim.</li>
+            </ul>
+            <p>We do not sell personal data, and we do not share it for marketing.</p>
+
+            <h3>Records held by the hospital</h3>
+            <p>Where you are seen at a hospital or clinic, that provider keeps its own record of your care and is a separate data controller in its own right, with its own privacy notice, retention arrangements and complaints procedure. This notice covers the records we hold as your treating consultant. If you want to see or query the hospital's record, or raise a concern about the care delivered at that site, you will usually need to approach the provider directly, and we can tell you who to contact.</p>
+
+            <h2 id="s11">B4. Retention and automated decision-making</h2>
+            <p>We retain clinical records with regard to the <em>Records Management Code of Practice for Health and Social Care</em>, which we follow as best practice. Adult health records are generally kept for a minimum of <strong>8 years</strong> after the conclusion of treatment. Records may be kept longer where there is a continuing clinical need, an ongoing or anticipated legal claim, or a specific legal requirement. Records relating to anyone under 18 are retained until at least their 25th birthday. Financial records are kept for 6 years in line with HMRC requirements.</p>
+            <p>We do not make decisions about your care by automated means, and we do not carry out profiling that produces legal or similarly significant effects.</p>
+
+            <h2 id="s12">3. Communicating with us</h2>
+            <p>If you email or telephone us, we will hold that correspondence in order to respond to it and, where you are a patient, as part of your record.</p>
+            <p><strong>Ordinary email is not a secure medium.</strong> Messages can be intercepted, delayed, misdirected or fail to arrive. We would therefore ask you not to send detailed clinical information, scans or reports by ordinary email. Where sensitive material needs to be transferred, we will arrange a secure route — NHS-to-NHS mail, encrypted transfer, or post. If you choose to email us anyway, we will treat what you send confidentially, but we cannot control the security of the message in transit.</p>
+
+            <div class="urgent-box">
+                <p><strong>Email and this website are not monitored for urgent or emergency problems.</strong> Messages may not be read for some time, and no clinical advice is given by email outside an established consultation.</p>
+                <p>If you are undergoing treatment and become unwell — for example with a fever, chest pain, or uncontrolled symptoms — contact the <strong>24-hour Acute Oncology Service</strong> number you were given at the start of treatment.</p>
+                <p>In a life-threatening emergency, dial <strong>999</strong> or attend your nearest A&amp;E department.</p>
+            </div>
+
+            <h2 id="s13">4. Your rights</h2>
+            <p>Under the UK GDPR you have the right to:</p>
+            <ul>
+                <li><strong>Be informed</strong> about how your data is used — the purpose of this notice.</li>
+                <li><strong>Access</strong> your records, by making a subject access request. We will normally respond within one month.</li>
+                <li><strong>Rectification</strong> of inaccurate personal data. In clinical records, a factual error will be corrected; where a professional opinion is disputed, the record is annotated with your comments rather than altered, so that the clinical history remains intelligible.</li>
+                <li><strong>Erasure</strong> in certain circumstances. This right is limited for clinical records, which we are required to retain (Article 17(3)).</li>
+                <li><strong>Restriction</strong> of processing in certain circumstances.</li>
+                <li><strong>Data portability</strong>, which applies to data you provided that we process by automated means under contract or consent.</li>
+                <li><strong>Object</strong> to processing carried out on the basis of legitimate interests. We will stop unless we have compelling grounds to continue, though this may affect our ability to provide safe care.</li>
+                <li><strong>Withdraw consent</strong> at any time, where we have relied on consent. Most clinical processing does not rely on consent, so withdrawing it will not usually stop us holding your records.</li>
+            </ul>
+            <p>These rights are free to exercise. Use the contact details in section 2, and we may ask you to verify your identity before we release information.</p>
+
+            <h2 id="s14">5. Complaints</h2>
+            <h3>About how we have handled your data</h3>
+            <p>If you believe we have not handled your personal data properly, please tell us first, using the contact details in section 2. Since 19 June 2026, section 164A of the Data Protection Act 2018 gives you a statutory right to complain directly to us, and requires us to have a process for dealing with it. We will:</p>
+            <ul>
+                <li>acknowledge your complaint within <strong>30 days</strong> of receiving it;</li>
+                <li>make appropriate enquiries and keep you updated;</li>
+                <li>tell you the outcome without undue delay, and explain how to escalate it.</li>
+            </ul>
+            <p>You can complain in whatever way suits you — email, letter or telephone — and you do not need to use any particular form of words.</p>
+            <p>If you remain dissatisfied, you can complain to the Information Commissioner's Office at <a href="https://ico.org.uk/make-a-complaint/" target="_blank" rel="noopener" class="text-link">ico.org.uk/make-a-complaint</a> or on 0303 123 1113. You can approach the ICO at any time, but raising it with us first is usually quicker.</p>
+
+            <h3>About your clinical care</h3>
+            <p>Complaints about the care itself are handled separately from data protection complaints, and the route depends on where you were seen.</p>
+            <p>For NHS care, contact the hospital's Patient Advice and Liaison Service (PALS). For care at a private hospital or clinic, please raise the matter with us or with the hospital directly; because care there is delivered under that provider's governance arrangements, its own complaints procedure will apply, and unresolved complaints may be escalated to the independent adjudication scheme the provider subscribes to. We will tell you who to contact and will co-operate fully with any investigation.</p>
+
+            <h2 id="s15">6. Changes to this notice</h2>
+            <p>We review this notice periodically and will update it when our practice or the law changes. The date at the top shows when it was last revised. Material changes affecting patients will be drawn to their attention directly where practicable.</p>
+
+            <div class="disclaimer-box" id="s16">
+                <h2 style="margin-top:0; border:none; padding:0; font-size: 1.4rem;">7. Disclaimers</h2>
+                <p><strong>Not medical advice.</strong> The information on this website is general and educational. It does not constitute medical advice, diagnosis or treatment recommendations for any individual, and it must not be relied on as a substitute for consulting a qualified clinician about your own circumstances.</p>
+                <p><strong>No doctor–patient relationship.</strong> Reading this website, or emailing or telephoning the Practice, does not by itself create a doctor–patient relationship. That relationship arises only following a formal clinical consultation and agreed terms of engagement.</p>
+                <p><strong>Not for emergencies.</strong> This website and its published contact details are not monitored for urgent clinical problems. Please see the guidance in section 3.</p>
+                <p><strong>External links.</strong> Links to other organisations are provided for convenience. We do not control and are not responsible for their content, accuracy or privacy practices.</p>
+                <p style="margin-bottom:0;"><strong>Accuracy and currency.</strong> Clinical practice changes. While we take care to keep this site accurate, no warranty is given that all content is current or complete at the time you read it.</p>
             </div>
 
         </section>
@@ -162,7 +371,7 @@
 
 <footer>
     <div class="container" style="text-align: center; padding-bottom: 2rem;">
-        <p>&copy; 2026 AM Oncology. All Rights Reserved.</p>
+        <p>&copy; 2026 AM Oncology. This website is for information only.</p>
     </div>
 </footer>
 
