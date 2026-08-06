@@ -5,18 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dr Firstname Lastname | Consultant Clinical Oncologist</title>
-    <meta name="description" content="Official website of Dr Asad Mahmood, Consultant Clinical Oncologist specialising in Gastrointestinal Oncology and Neuro-Oncology.">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Official website of Dr [Firstname] [Lastname], Consultant Clinical Oncologist specialising in Gastrointestinal Oncology and Neuro-Oncology.">
+
+    <!-- Self-hosted fonts: preload the two weights used above the fold.
+         Update version strings to match your actual filenames. -->
+    <link rel="preload" href="assets/fonts/playfair-display-v37-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/lato-v24-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="assets/style.css">
 
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Physician",
-      "name": "Dr Asad Mahmood",
+      "name": "Dr [Firstname] [Lastname]",
       "jobTitle": "Consultant Clinical Oncologist",
       "medicalSpecialty": ["Oncology", "RadiationOncology"],
       "hospitalAffiliation": {
@@ -66,7 +67,7 @@
         <div class="hero-banner">
             <div class="hero-content">
                 <h2>Clinical Oncology Care</h2>
-                <p class="hero-lead">Gastrointestinal and Neuro-Oncology Cancers & Conditions</p>
+                <p class="hero-lead">Gastrointestinal and Neuro-Oncology Cancers &amp; Conditions</p>
                 <div class="hero-buttons">
                     <a href="#contact" class="btn btn-primary">Contact</a>
                     <a href="#about" class="btn btn-secondary">About</a>
@@ -78,7 +79,7 @@
             <div class="card-grid section-space" style="margin-top: 3rem;">
                 <article class="card">
                     <div class="card-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1606150717578-567569be9d24?q=80&w=764&auto=format&fit=crop&sat=-100" alt="Radiotherapy">
+                        <img src="assets/photo-1606150717578-567569be9d24_rt.jpg" alt="Radiotherapy" loading="lazy" decoding="async">
                     </div>
                     <div class="card-body">
                         <h3>Radiotherapy</h3>
@@ -92,7 +93,7 @@
 
                 <article class="card">
                     <div class="card-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1437624155766-b64bf17eb2ce?q=80&w=800&auto=format&fit=crop&sat=-100" alt="Systemic Therapy">
+                        <img src="assets/photo-1437624155766-b64bf17eb2ce_sact.jpg" alt="Systemic Therapy" loading="lazy" decoding="async">
                     </div>
                     <div class="card-body">
                         <h3>Systemic Anti-Cancer Therapy (SACT)</h3>
@@ -108,16 +109,16 @@
 
                 <article class="card">
                     <div class="card-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1641712695162-884b8cf773bb?q=80&w=1170&auto=format&fit=crop&sat=-100" alt="Research & Publications">
+                        <img src="assets/photo-1641712695162-884b8cf773bb_pub.jpg" alt="Research &amp; Publications" loading="lazy" decoding="async">
                     </div>
                     <div class="card-body">
-                        <h3>Research & Publications</h3>
+                        <h3>Research &amp; Publications</h3>
                         <p>
                             Research drives every improvement in cancer care, from earlier detection through to treatments that are more effective and better tolerated. 
                             Clinical trials test new drugs, radiotherapy techniques and treatment combinations against current standards, while pre-clinical scientific studies explore how tumours grow, spread and develop resistance. 
                             Findings from both feed back into everyday practice. 
                         </p>
-                        <a href="https://scholar.google.com/citations?hl=en&user=F5NzX1UAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="noopener" class="text-link">View more &rarr;</a>
+                        <a href="https://scholar.google.com/citations?hl=en&amp;user=F5NzX1UAAAAJ&amp;view_op=list_works&amp;sortby=pubdate" target="_blank" rel="noopener" class="text-link">View more &rarr;</a>
                     </div>
                 </article>
             </div>
@@ -128,7 +129,7 @@
     <section id="about">
         <div class="page-header">
             <div class="container">
-                <h1>Biography & Expertise</h1>
+                <h1>Biography &amp; Expertise</h1>
             </div>
         </div>
 
@@ -139,7 +140,10 @@
                     <p>
                         <strong>Dr Firstname Lastname</strong> is a Consultant Clinical Oncologist at <strong>Barts Health NHS Trust</strong>. 
                         He specialises in the use of systemic anti-cancer therapies and radiotherapy for the management of <strong>gastrointestinal</strong> and <strong>neurological</strong> cancers. 
-                        <!-- He has a particular interest in advanced radiotherapy techniques, including stereotactic radiosurgery/radiotherapy (SRS/SABR) and contact brachytherapy (Papillon CXB).
+                    </p>
+                    <!--
+                    <p>
+                        He has a particular interest in advanced radiotherapy techniques, including stereotactic radiosurgery/radiotherapy (SRS/SABR) and contact brachytherapy (Papillon CXB).
                     </p>
                     <p>
                         He graduated from Barts and The London with distinction and completed medical training in London and East of England, followed by specialty training in oncology in London. 
@@ -147,9 +151,10 @@
                         and was awarded a Doctoral Clinical Fellowship at the <strong>Francis Crick Institute</strong> to conduct research in cancer metabolism.
                     </p>
                     <p> 
-                        He is a member of the <strong>European Organisation for Research and Treatment of Cancer's (EORTC)</strong> Gastrointestinal Tract Cancer and Brain Tumor Groups
-                        He is a Clinical Educator in oncology and holds a postgraduate qualification in teaching and learning. --> 
+                        He is a member of the <strong>European Organisation for Research and Treatment of Cancer's (EORTC)</strong> Gastrointestinal Tract Cancer and Brain Tumor Groups. 
+                        He is a Clinical Educator in oncology and holds a postgraduate qualification in teaching and learning.
                     </p>
+                    -->
                 </div>
                 <div class="bio-image">
                     <div class="bio-image-placeholder">[Professional Headshot tbc]</div>
@@ -171,10 +176,10 @@
                         </ul>
                     </div>
                     <div class="card card-body">
-                        <h3>Neurological Cancers & Conditions</h3>
+                        <h3>Neurological Cancers &amp; Conditions</h3>
                         <p class="list-label">Including:</p>
                         <ul class="card-list">
-                            <li>Primary brain & spinal tumours</li>
+                            <li>Primary brain &amp; spinal tumours</li>
                             <li>Brain metastases</li>
                             <li>Skull base tumours</li>
                             <li>Ocular tumours and benign conditions</li>
@@ -193,7 +198,7 @@
             </div>
 
             <div class="section-space">
-                <h2>Education & Qualifications</h2>
+                <h2>Education &amp; Qualifications</h2>
                 <div class="card" style="padding: 0;">
                     <div class="card-body">
                         <ul class="qualifications-list">
@@ -210,7 +215,7 @@
                                 <span>Institute of Cancer Research [2021]</span>
                             </li>
                             <li>
-                                <span><strong>PGCert (Learning & Teaching)</strong></span>
+                                <span><strong>PGCert (Learning &amp; Teaching)</strong></span>
                                 <span>Queen Mary University of London [2014]</span>
                             </li>
                             <li>
@@ -232,7 +237,7 @@
     <section id="contact">
         <div class="page-header">
             <div class="container">
-                <h1>Contact & Locations</h1>
+                <h1>Contact &amp; Locations</h1>
             </div>
         </div>
 
@@ -240,7 +245,7 @@
             <div class="alert-box">
                 <h3>Urgent Medical Advice</h3>
                 <p><strong>This website is not monitored for emergencies.</strong> If you are currently undergoing treatment and feel unwell (e.g., fever, chest pain, uncontrolled symptoms), please contact the <strong>24-hour Acute Oncology Service</strong> number provided at the start of your treatment.</p>
-                <p style="margin-bottom: 0;">In a life-threatening emergency, dial <strong>999</strong> or attend your nearest A&E immediately.</p>
+                <p style="margin-bottom: 0;">In a life-threatening emergency, dial <strong>999</strong> or attend your nearest A&amp;E immediately.</p>
             </div>
 
             <div class="contact-grid section-space">
@@ -274,7 +279,7 @@
                             EC1A 7BE
                         </address>
                         <p><em>Clinics held: n/a</em></p>
-                        <a href="https://www.google.co.uk/maps/place/St+Bartholomew's+Hospital/@51.5170928,-0.1023395,17z/data=!4m6!3m5!1s0x48761b537f68cf8d:0xf7fe23dd6e44f11a!8m2!3d51.5168725!4d-0.1014168!16zL20vMDY2M2gx?entry=ttu&g_ep=EgoyMDI2MDcyMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener" class="btn btn-secondary btn-map">View on Map</a>
+                        <a href="https://www.google.co.uk/maps/place/St+Bartholomew's+Hospital/@51.5170928,-0.1023395,17z/data=!4m6!3m5!1s0x48761b537f68cf8d:0xf7fe23dd6e44f11a!8m2!3d51.5168725!4d-0.1014168!16zL20vMDY2M2gx?entry=ttu&amp;g_ep=EgoyMDI2MDcyMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener" class="btn btn-secondary btn-map">View on Map</a>
                     </article>
                     
                 </div>
@@ -290,12 +295,12 @@
             <p>
                 <strong>Dr Firstname Lastname</strong><br>
                 Consultant Clinical Oncologist<br>
-                GMC Number: <!-- 7271942 -->
+                GMC Number: [Insert GMC Number]
             </p>
         </div>
         <div class="footer-legal">
             <p>&copy; 2026 AM Oncology. This website is for information only.</p>
-            <p><a href="privacy.html">Privacy Policy</a> | <a href="privacy.html">Cookie Policy</a></p>
+            <p><a href="privacy.html">Privacy &amp; Cookie Policy</a></p>
         </div>
     </div>
 </footer>
