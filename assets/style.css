@@ -482,6 +482,22 @@ section[id] { scroll-margin-top: 90px; }
     font-size: 0.8rem;
 }
 
+/* Location card action row (learn-more link + map button) */
+.location-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* Professional Profiles button row */
+.profile-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
 /* 12. ACCESSIBILITY */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
