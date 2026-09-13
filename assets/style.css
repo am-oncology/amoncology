@@ -52,6 +52,7 @@
   --navy-primary: #183B56;  
   --teal-accent: #3E8E95;   
   --gold-accent: #C5A065;  
+  --nhs-blue: #005EB8;
   
   --bg-body: #FAFAFA;      
   --bg-white: #FFFFFF;
@@ -168,20 +169,6 @@ nav a::after {
   left: 0;
 }
 nav a:hover::after { width: 100%; }
-
-/* Style the CXB tool differently */
-nav a.tool-link {
-  border: 1px solid var(--text-light);
-  padding: 5px 12px;
-  border-radius: 4px;
-  font-size: 0.8rem;
-}
-nav a.tool-link:hover {
-  background: var(--text-light);
-  color: white;
-}
-nav a.tool-link::after { display: none; } 
-
 
 /* 4. MAIN LAYOUT */
 main {
@@ -451,6 +438,11 @@ footer {
   border-radius: 8px;
   box-shadow: var(--shadow-soft);
   border: 1px solid #e2e8f0;
+  margin-bottom: 2rem;
+}
+.contact-info .location-card:last-child,
+.locations .location-card:last-child {
+  margin-bottom: 0;
 }
 .location-card address {
   font-style: normal;
@@ -458,6 +450,35 @@ footer {
   margin-bottom: 1rem;
   display: block;
 }
+.location-card p {
+  margin: 0 0 1rem 0;
+}
+.location-card p:last-child {
+  margin-bottom: 0;
+}
+
+/* NHS vs Private site colour-coding (used on both the "Get in Touch"
+   cards and the Practice Locations cards below them) */
+.location-card--nhs {
+  border-left: 4px solid var(--nhs-blue);
+}
+.location-card--private {
+  border-left: 4px solid var(--navy-primary);
+}
+.tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.15rem 0.5rem;
+  border-radius: 3px;
+  margin-left: 0.4rem;
+  vertical-align: middle;
+  color: #fff;
+}
+.tag-nhs { background: var(--nhs-blue); }
+.tag-private { background: var(--navy-primary); }
 
 @media (max-width: 768px) {
   .bio-grid { grid-template-columns: 1fr; } 
@@ -473,6 +494,7 @@ section[id] { scroll-margin-top: 90px; }
 .card-list { padding-left: 20px; color: var(--text-light); }
 .list-label { font-size: 0.9rem; }
 .section-heading { font-size: 1.8rem; margin-bottom: 1.5rem; }
+.text-muted { color: var(--text-light); }
 /* Dedicated Button Modifier (replaces inline button overrides) */
 .btn-map {
     background: var(--navy-primary);
