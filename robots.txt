@@ -1,0 +1,21 @@
+User-agent: *
+Allow: /
+
+# Block aggressive AI crawlers & content scrapers
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: AnthropicAI
+Disallow: /
