@@ -6,8 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dr Firstname Lastname | Consultant Oncologist</title>
     <meta name="description" content="Official website of Dr Firstname Lastname, Consultant Oncologist specialising in Gastrointestinal Oncology and Neuro-Oncology.">
-    <link rel="preload" href="assets/fonts/playfair-display-v37-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="assets/fonts/lato-v24-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/playfair-display-v40-latin_latin-ext-700.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/lato-v25-latin_latin-ext-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/photo-1448375240586-882707db888b_hero.jpg" as="image" fetchpriority="high">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <meta name="theme-color" content="#0A1929">
+    <link rel="canonical" href="https://www.amoncology.com/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="AM Oncology">
+    <meta property="og:title" content="Dr Firstname Lastname | Consultant Oncologist">
+    <meta property="og:description" content="Consultant Clinical Oncologist specialising in Gastrointestinal Oncology and Neuro-Oncology.">
+    <meta property="og:url" content="https://www.amoncology.com/">
+    <meta property="og:image" content="https://www.amoncology.com/assets/photo-1448375240586-882707db888b_hero.jpg">
+    <meta property="og:locale" content="en_GB">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="stylesheet" href="assets/style.css">
 
     <script type="application/ld+json">
@@ -16,7 +29,8 @@
       "@type": "Physician",
       "name": "Dr Firstname Lastname",
       "jobTitle": "Consultant Oncologist",
-      "medicalSpecialty": ["Oncology", "RadiationOncology", "ClinicalOncology"],
+      "medicalSpecialty": "https://schema.org/Oncologic",
+      "image": "https://www.amoncology.com/assets/photo-1448375240586-882707db888b_hero.jpg",
       "hospitalAffiliation": {
         "@type": "Hospital",
         "name": "Health NHS Trust"
@@ -29,6 +43,8 @@
 </head>
 
 <body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
 
 <div class="top-bar">
     <div class="container">
@@ -44,26 +60,26 @@
 <header>
     <div class="container header-flex">
         <div class="brand">
-            <a href="#home" style="text-decoration:none;">
-                <h1>Dr Firstname Lastname</h1>
+            <a href="#home">
+                <span class="brand-name">Dr Firstname Lastname</span>
                 <span class="subtitle">Consultant Oncologist</span>
             </a>
         </div>
-        <nav>
-            <a href="#home" class="active">Home</a>
+        <nav aria-label="Main">
+            <a href="#home" class="active" aria-current="true">Home</a>
             <a href="#about">About</a>
             <a href="#contact">Contact</a>
         </nav>
     </div>
 </header>
 
-<main>
+<main id="main">
 
     <!-- SECTION 1: HOME -->
     <section id="home">
         <div class="hero-banner">
             <div class="hero-content">
-                <h2>Clinical Oncology Care</h2>
+                <h1>Clinical Oncology Care</h1>
                 <p class="hero-lead">Gastrointestinal and Neuro-Oncology Cancers &amp; Conditions</p>
                 <div class="hero-buttons">
                     <a href="#contact" class="btn btn-primary">Contact</a>
@@ -76,7 +92,7 @@
             <div class="card-grid section-space" style="margin-top: 3rem;">
                 <article class="card">
                     <div class="card-image-wrapper">
-                        <img src="assets/photo-1606150717578-567569be9d24_rt.jpg" alt="Radiotherapy" loading="lazy" decoding="async">
+                        <img src="assets/photo-1606150717578-567569be9d24_rt.jpg" alt="" width="1000" height="750" loading="lazy" decoding="async">
                     </div>
                     <div class="card-body">
                         <h3>Radiotherapy</h3>
@@ -84,13 +100,13 @@
                             Radiotherapy uses precisely targeted radiation, usually high-energy x-rays, to treat cancers and certain benign conditions. 
                             It can be delivered as external radiotherapy, aimed at the tumour from outside the body, or as internal radiotherapy (brachytherapy), where the radiation source is placed close to the tumour itself. 
                         </p>
-                        <a href="https://www.macmillan.org.uk/cancer-information-and-support/treatment/types-of-treatment/radiotherapy" target="_blank" rel="noopener" class="text-link">Learn more &rarr;</a>
+                        <a href="https://www.macmillan.org.uk/cancer-information-and-support/treatment/types-of-treatment/radiotherapy" target="_blank" rel="noopener" class="text-link">Learn more<span class="visually-hidden"> about radiotherapy</span> &rarr;<span class="visually-hidden"> (opens in a new tab)</span></a>
                     </div>
                 </article>
 
                 <article class="card">
                     <div class="card-image-wrapper">
-                        <img src="assets/photo-1437624155766-b64bf17eb2ce_sact.jpg" alt="Systemic Therapy" loading="lazy" decoding="async">
+                        <img src="assets/photo-1437624155766-b64bf17eb2ce_sact.jpg" alt="" width="1000" height="667" loading="lazy" decoding="async">
                     </div>
                     <div class="card-body">
                         <h3>Systemic Anti-Cancer Therapy (SACT)</h3>
@@ -99,13 +115,13 @@
                             It includes chemotherapy, immunotherapy, targeted agents and hormone therapy.
                             The choice depends on the tumour type and its molecular profile, as well as general health and treatment goals.   
                         </p>
-                        <a href="https://www.macmillan.org.uk/cancer-information-and-support/treatment/types-of-treatment/cancer-drug-treatments" target="_blank" rel="noopener" class="text-link">Learn more &rarr;</a>
+                        <a href="https://www.macmillan.org.uk/cancer-information-and-support/treatment/types-of-treatment/cancer-drug-treatments" target="_blank" rel="noopener" class="text-link">Learn more<span class="visually-hidden"> about systemic anti-cancer therapy</span> &rarr;<span class="visually-hidden"> (opens in a new tab)</span></a>
                     </div>
                 </article>
 
                 <article class="card">
                     <div class="card-image-wrapper">
-                        <img src="assets/photo-1641712695162-884b8cf773bb_pub.jpg" alt="Research &amp; Publications" loading="lazy" decoding="async">
+                        <img src="assets/photo-1641712695162-884b8cf773bb_pub.jpg" alt="" width="1000" height="750" loading="lazy" decoding="async">
                     </div>
                     <div class="card-body">
                         <h3>Research &amp; Publications</h3>
@@ -113,7 +129,7 @@
                             Research drives improvement in cancer care, from earlier detection through to more effective and better tolerated treatments. 
                             Clinical trials test new medications and radiotherapy techniques, while pre-clinical scientific studies explore how tumours grow, spread and develop resistance. 
                         </p>
-                        <a href="https://scholar.google.com/citations?hl=en&amp;user=F5NzX1UAAAAJ&amp;view_op=list_works&amp;sortby=pubdate" target="_blank" rel="noopener" class="text-link">View more &rarr;</a>
+                        <a href="https://scholar.google.com/citations?hl=en&amp;user=F5NzX1UAAAAJ&amp;view_op=list_works&amp;sortby=pubdate" target="_blank" rel="noopener" class="text-link">View more<span class="visually-hidden"> publications on Google Scholar</span> &rarr;<span class="visually-hidden"> (opens in a new tab)</span></a>
                     </div>
                 </article>
             </div>
@@ -124,7 +140,7 @@
     <section id="about">
         <div class="page-header">
             <div class="container">
-                <h1>Biography &amp; Expertise</h1>
+                <h2>Biography &amp; Expertise</h2>
             </div>
         </div>
 
@@ -140,6 +156,8 @@
                 </div>
                 <div class="bio-image">
                     <div class="bio-image-placeholder">[Professional Headshot tbc]</div>
+                    <!-- When the headshot is ready, replace the line above with e.g.
+                         <img src="assets/headshot.jpg" alt="Dr Firstname Lastname" width="800" height="1000" loading="lazy" decoding="async"> -->
                 </div>
             </div>
 
@@ -223,7 +241,7 @@
     <section id="contact">
         <div class="page-header">
             <div class="container">
-                <h1>Contact &amp; Locations</h1>
+                <h2>Contact &amp; Locations</h2>
             </div>
         </div>
 
@@ -253,7 +271,7 @@
                         <p class="text-muted">For private appointments and second opinions, please contact:</p>
                         <p><strong>Email:</strong> <a href="mailto:info@amoncology.com" class="text-link">info@amoncology.com</a></p>
                         <p><strong>Tel:</strong> <a href="tel:+442000000000" class="text-link">020 0000 0000</a></p>
-                        <p><a href="https://www.phin.org.uk/" target="_blank" rel="noopener" class="text-link">View consultation fees on PHIN &rarr;</a></p>
+                        <p><a href="https://www.phin.org.uk/" target="_blank" rel="noopener" class="text-link">View consultation fees on PHIN &rarr;<span class="visually-hidden"> (opens in a new tab)</span></a></p>
                     </div>-->
 
                 </div>
@@ -270,8 +288,8 @@
                         </address>
                         <p><em>Clinics held: tbc</em></p>
                         <div class="location-links">
-                            <a href="https://www.bartshealth.nhs.uk/cancer-services/" target="_blank" rel="noopener" class="text-link">Visit hospital website &rarr;</a>
-                            <a href="https://www.google.co.uk/maps/place/St+Bartholomew's+Hospital/@51.5170928,-0.1023395,17z/data=!4m6!3m5!1s0x48761b537f68cf8d:0xf7fe23dd6e44f11a!8m2!3d51.5168725!4d-0.1014168!16zL20vMDY2M2gx?entry=ttu" target="_blank" rel="noopener" class="btn btn-secondary btn-map">View on Map</a>
+                            <a href="https://www.bartshealth.nhs.uk/cancer-services/" target="_blank" rel="noopener" class="text-link">Visit hospital website &rarr;<span class="visually-hidden"> (opens in a new tab)</span></a>
+                            <a href="https://www.google.co.uk/maps/place/St+Bartholomew's+Hospital/@51.5170928,-0.1023395,17z/data=!4m6!3m5!1s0x48761b537f68cf8d:0xf7fe23dd6e44f11a!8m2!3d51.5168725!4d-0.1014168!16zL20vMDY2M2gx?entry=ttu" target="_blank" rel="noopener" class="btn btn-secondary btn-map">View on Map<span class="visually-hidden"> (opens in a new tab)</span></a>
                         </div>
                     </article>
 
@@ -286,8 +304,8 @@
                         <p><strong>Email:</strong> <a href="mailto:info.bartsprivatecare@nhs.net" class="text-link">info.bartsprivatecare@nhs.net</a></p>
                         <p><em>Clinics held: tbc</em></p>
                         <div class="location-links">
-                            <a href="https://bartshealthprivatecare.com/" target="_blank" rel="noopener" class="text-link">Visit website &rarr;</a>
-                            <a href="https://www.google.co.uk/maps/place/St+Bartholomew's+Hospital/@51.5170928,-0.1023395,17z/data=!4m6!3m5!1s0x48761b537f68cf8d:0xf7fe23dd6e44f11a!8m2!3d51.5168725!4d-0.1014168!16zL20vMDY2M2gx?entry=ttu" target="_blank" rel="noopener" class="btn btn-secondary btn-map">View on Map</a>
+                            <a href="https://bartshealthprivatecare.com/" target="_blank" rel="noopener" class="text-link">Visit website &rarr;<span class="visually-hidden"> (opens in a new tab)</span></a>
+                            <a href="https://www.google.co.uk/maps/place/St+Bartholomew's+Hospital/@51.5170928,-0.1023395,17z/data=!4m6!3m5!1s0x48761b537f68cf8d:0xf7fe23dd6e44f11a!8m2!3d51.5168725!4d-0.1014168!16zL20vMDY2M2gx?entry=ttu" target="_blank" rel="noopener" class="btn btn-secondary btn-map">View on Map<span class="visually-hidden"> (opens in a new tab)</span></a>
                         </div>
                     </article>-->
 
@@ -302,8 +320,8 @@
                         <p><strong>Email:</strong> <a href="mailto:HOBKH.Oncology@nuffieldhealth.com" class="text-link">HOBKH.Oncology@nuffieldhealth.com</a></p>
                         <p><em>Clinics held: tbc</em></p>
                         <div class="location-links">
-                            <a href="https://www.nuffieldhealth.com/hospitals/the-holly/cancer-care-at-the-holly-hospital" target="_blank" rel="noopener" class="text-link">Visit hospital website &rarr;</a>
-                            <a href="https://www.google.co.uk/maps/place/Nuffield+Health+The+Holly+Hospital/@51.6244266,0.0320593,17z/data=!3m1!4b1!4m6!3m5!1s0x47d8a0e92159ec65:0x6deb4b98cde9b3f5!8m2!3d51.6244266!4d0.0320593!16s%2Fg%2F1tj5p_g3?entry=ttu" target="_blank" rel="noopener" class="btn btn-secondary btn-map">View on Map</a>
+                            <a href="https://www.nuffieldhealth.com/hospitals/the-holly/cancer-care-at-the-holly-hospital" target="_blank" rel="noopener" class="text-link">Visit hospital website &rarr;<span class="visually-hidden"> (opens in a new tab)</span></a>
+                            <a href="https://www.google.co.uk/maps/place/Nuffield+Health+The+Holly+Hospital/@51.6244266,0.0320593,17z/data=!3m1!4b1!4m6!3m5!1s0x47d8a0e92159ec65:0x6deb4b98cde9b3f5!8m2!3d51.6244266!4d0.0320593!16s%2Fg%2F1tj5p_g3?entry=ttu" target="_blank" rel="noopener" class="btn btn-secondary btn-map">View on Map<span class="visually-hidden"> (opens in a new tab)</span></a>
                         </div>
                     </article>-->
 
@@ -318,11 +336,10 @@
                         <p><strong>Email:</strong> <a href="mailto:contactus@genesiscare.co.uk" class="text-link">contactus@genesiscare.co.uk</a></p>
                         <p><em>Clinics held: tbc</em></p>
                         <div class="location-links">
-                            <a href="https://www.genesiscare.com/uk/our-centres/chelmsford" target="_blank" rel="noopener" class="text-link">Visit centre website &rarr;</a>
-                            <a href="https://www.google.co.uk/maps/place/GenesisCare/@51.7540932,0.4849728,17z/data=!3m1!4b1!4m6!3m5!1s0x47d8e95adb8af6af:0x6c18681591d26c11!8m2!3d51.7540932!4d0.4849728!16s%2Fg%2F11c5s61n2c?entry=ttu" target="_blank" rel="noopener" class="btn btn-secondary btn-map">View on Map</a>
-                        </div>-->
-                    
-                    </article>
+                            <a href="https://www.genesiscare.com/uk/our-centres/chelmsford" target="_blank" rel="noopener" class="text-link">Visit centre website &rarr;<span class="visually-hidden"> (opens in a new tab)</span></a>
+                            <a href="https://www.google.co.uk/maps/place/GenesisCare/@51.7540932,0.4849728,17z/data=!3m1!4b1!4m6!3m5!1s0x47d8e95adb8af6af:0x6c18681591d26c11!8m2!3d51.7540932!4d0.4849728!16s%2Fg%2F11c5s61n2c?entry=ttu" target="_blank" rel="noopener" class="btn btn-secondary btn-map">View on Map<span class="visually-hidden"> (opens in a new tab)</span></a>
+                        </div>
+                    </article>-->
 
                 </div>
             </div>
@@ -354,8 +371,11 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     const id = entry.target.getAttribute('id');
-                    document.querySelectorAll('nav a').forEach(link => {
-                        link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+                    document.querySelectorAll('header nav a').forEach(link => {
+                        const isCurrent = link.getAttribute('href') === `#${id}`;
+                        link.classList.toggle('active', isCurrent);
+                        if (isCurrent) link.setAttribute('aria-current', 'true');
+                        else link.removeAttribute('aria-current');
                     });
                 }
             });

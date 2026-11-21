@@ -19,3 +19,5 @@ Disallow: /
 
 User-agent: AnthropicAI
 Disallow: /
+
+Sitemap: https://www.amoncology.com/sitemap.xml

@@ -7,9 +7,12 @@
     <meta name="description" content="Privacy notice and cookie policy for the website of Dr Firstname Lastname, Consultant Oncologist.">
     <meta name="robots" content="index, follow">
 
-    <!-- Self-hosted fonts. Update version strings to match your actual filenames. -->
-    <link rel="preload" href="assets/fonts/playfair-display-v37-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="assets/fonts/lato-v24-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <!-- Self-hosted fonts. If the font files are replaced, update these names and the @font-face rules in style.css. -->
+    <link rel="preload" href="assets/fonts/playfair-display-v40-latin_latin-ext-700.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/lato-v25-latin_latin-ext-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <meta name="theme-color" content="#0A1929">
+    <link rel="canonical" href="https://www.amoncology.com/privacy.html">
     <link rel="stylesheet" href="assets/style.css">
 
     <style>
@@ -144,21 +147,23 @@
 
 <body>
 
+<a class="skip-link" href="#main">Skip to main content</a>
+
 <header>
     <div class="container header-flex">
         <div class="brand">
-            <a href="index.html" style="text-decoration:none;">
-                <h1>Dr Firstname Lastname</h1>
+            <a href="index.html">
+                <span class="brand-name">Dr Firstname Lastname</span>
                 <span class="subtitle">Consultant Oncologist</span>
             </a>
         </div>
-        <nav>
+        <nav aria-label="Main">
             <a href="index.html">Home</a>
         </nav>
     </div>
 </header>
 
-<main>
+<main id="main">
     <article class="legal-container">
 
         <div class="legal-header">
@@ -236,7 +241,7 @@
             <p><strong>This website sets no analytics, advertising, marketing or tracking technologies of any kind.</strong> No consent banner is displayed because nothing is used that requires your consent.</p>
             <p>Cloudflare may set a small number of strictly necessary cookies to keep the site secure and available — for example, to distinguish genuine visitors from automated traffic. These fall within the "strictly necessary" exception in PECR and cannot be switched off without affecting delivery of the site itself.</p>
             <table>
-                <caption class="visually-hidden"></caption>
+                <caption class="visually-hidden">Types of cookies and whether this site uses them</caption>
                 <tr>
                     <th scope="col">Category</th>
                     <th scope="col">Used on this site?</th>
@@ -346,7 +351,7 @@
                 <li>tell you the outcome without undue delay, and explain how to escalate it.</li>
             </ul>
             <p>You can complain in whatever way suits you — email, letter or telephone — and you do not need to use any particular form of words.</p>
-            <p>If you remain dissatisfied, you can complain to the Information Commissioner's Office at <a href="https://ico.org.uk/make-a-complaint/" target="_blank" rel="noopener" class="text-link">ico.org.uk/make-a-complaint</a> or on 0303 123 1113. You can approach the ICO at any time, but raising it with us first is usually quicker.</p>
+            <p>If you remain dissatisfied, you can complain to the Information Commissioner's Office at <a href="https://ico.org.uk/make-a-complaint/" target="_blank" rel="noopener" class="text-link">ico.org.uk/make-a-complaint<span class="visually-hidden"> (opens in a new tab)</span></a> or on 0303 123 1113. You can approach the ICO at any time, but raising it with us first is usually quicker.</p>
 
             <h3>About your clinical care</h3>
             <p>Complaints about the care itself are handled separately from data protection complaints, and the route depends on where you were seen.</p>
@@ -372,6 +377,7 @@
 <footer>
     <div class="container" style="text-align: center; padding-bottom: 2rem;">
         <p>&copy; 2026 AM Oncology. This website is for information only.</p>
+        <p><a href="index.html" class="text-link">&larr; Back to home</a></p>
     </div>
 </footer>
 
